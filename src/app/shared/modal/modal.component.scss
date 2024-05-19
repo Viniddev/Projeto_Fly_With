@@ -1,0 +1,45 @@
+.modal {
+  color: #363636;
+  padding: 25px;
+
+  .quantidades {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .identificadores {
+    width: 200px;
+    text-align: start;
+  }
+
+  .operadores {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+
+    button {
+      background-color: #f6f5f2;
+    }
+  }
+
+  .numbers {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+  }
+
+  .categorias {
+    margin: 50px 0px 50px 0px;
+  }
+
+  .save-button {
+    width: 100%;
+  }
+}

@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../card/card.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-form-busca',
   templateUrl: './form-busca.component.html',
   styleUrls: ['./form-busca.component.scss'],
 })
-export class FormBuscaComponent {}
+export class FormBuscaComponent {
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    this.dialog.open(ModalComponent);
+  }
+}
