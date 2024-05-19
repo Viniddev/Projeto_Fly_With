@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from './shared/header/header.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports:[HeaderComponent],
-  standalone:true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent{
-  constructor(){}
+export class AppComponent {
   title = 'FinanceProject';
 }
