@@ -20,5 +20,49 @@
         <mat-chip-option>Promoções</mat-chip-option>
       </mat-chip-listbox>
     </div>
+    <div class="secondary-section">
+      <div class="destiny">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Origem</mat-label>
+            <mat-icon matPrefix color="primary">search</mat-icon>
+            <input matInput placeholder="Brasil..." />
+            <mat-icon matSuffix color="primary">flight_takeoff</mat-icon>
+          </mat-form-field>
+        </p>
+        <button mat-icon-button>
+          <mat-icon color="primary">sync_alt</mat-icon>
+        </button>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Destino</mat-label>
+            <mat-icon matPrefix color="primary">search</mat-icon>
+            <input matInput placeholder="Suiça..." />
+            <mat-icon matSuffix color="primary">flight_land</mat-icon>
+          </mat-form-field>
+        </p>
+      </div>
+      <div class="date">
+        <mat-form-field class="input-container" appearance="outline">
+          <mat-label>Data de ida</mat-label>
+          <input matInput [matDatepicker]="ida" placeholder="Data Ida" />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="ida"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #ida></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="input-container" appearance="outline">
+          <mat-label>Data da volta</mat-label>
+          <input matInput [matDatepicker]="volta" placeholder="Data VOlta" />
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="volta"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #volta></mat-datepicker>
+        </mat-form-field>
+        <button mat-flat-button color="primary">BUSCAR</button>
+      </div>
+    </div>
   </form>
 </app-card>

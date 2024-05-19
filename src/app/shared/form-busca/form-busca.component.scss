@@ -24,6 +24,26 @@
     align-items: center;
     justify-content: baseline;
     flex-direction: row;
-    gap: 25px;
+    gap: 15px;
+  }
+  .secondary-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 10px;
+
+    .destiny {
+      padding-top: 20px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 15px;
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
   }
 }
