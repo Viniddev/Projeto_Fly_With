@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -14,7 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './Pages/Home/home/home.component';
+import { HomeComponent } from './Pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './shared/banner/banner.component';
@@ -26,6 +27,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { PromocoesComponent } from './pages/promocoes/promocoes.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     CardDepoimentosComponent,
     FormBuscaComponent,
     ModalComponent,
+    PromocoesComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     CommonModule,
     MatNativeDateModule,
     MatDialogModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,19 +1,9 @@
 <mat-card class="card-busca">
   <mat-card-header>
-    <mat-card-title>Portugal</mat-card-title>
-    <mat-card-subtitle>Take our gold back</mat-card-subtitle>
+    <mat-card-title>{{ promocao.destino }}</mat-card-title>
+    <mat-card-subtitle>{{ promocao.preco }}</mat-card-subtitle>
   </mat-card-header>
-  <img
-    mat-card-image
-    src="../../../assets/portugal.webp"
-    alt="Photo from Portugal"
-  />
-  <mat-card-content>
-    <ul>
-      <li>Veneza</li>
-      <li>R$ 500</li>
-    </ul>
-  </mat-card-content>
+  <img mat-card-image src="{{ promocao.imagem }}" alt="Photo from Portugal" />
   <mat-card-actions>
     <button mat-flat-button color="primary">Saiba mais</button>
   </mat-card-actions>
