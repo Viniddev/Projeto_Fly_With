@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Pages/home/home.component';
+import { PromocoesComponent } from './Pages/promocoes/promocoes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './shared/banner/banner.component';
@@ -27,7 +28,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
-import { PromocoesComponent } from './pages/promocoes/promocoes.component';
 
 @NgModule({
   declarations: [

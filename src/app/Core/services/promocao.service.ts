@@ -8,9 +8,9 @@ import { Promocao } from '../Types/Type';
   providedIn: 'root',
 })
 export class PromocaoService {
-  constructor(private httpClient: HttpClient) {}
-
   private apiUrl: string = environment.apiUrl;
+
+  constructor(private httpClient: HttpClient) {}
 
   listar(): Observable<Promocao[]> {
     return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`);

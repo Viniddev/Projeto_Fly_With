@@ -1,18 +1,20 @@
-<app-banner src="../../../../assets/banner-homepage.png" alt="banner" />
-<app-container>
+<section class="homepage">
+  <app-banner src="../../../../assets/banner-homepage.png" alt="banner" />
   <app-container>
-    <br />
-    <app-form-busca></app-form-busca>
-    <h2>Promoções</h2>
-    <div class="card-wrapper">
-      <app-card-busca />
-    </div>
-    <br />
-    <h2>Depoimentos</h2>
-    <div class="card-wrapper">
-      <app-card-depoimentos></app-card-depoimentos>
-      <app-card-depoimentos></app-card-depoimentos>
-      <app-card-depoimentos></app-card-depoimentos>
-    </div>
+    <app-container>
+      <br />
+      <app-form-busca></app-form-busca>
+      <h2>Promoções</h2>
+      <div class="conteiner-main">
+        <app-promocoes></app-promocoes>
+      </div>
+      <br />
+      <h2>Depoimentos</h2>
+      <div class="conteiner-main">
+        <app-card-depoimentos></app-card-depoimentos>
+        <app-card-depoimentos></app-card-depoimentos>
+        <app-card-depoimentos></app-card-depoimentos>
+      </div>
+    </app-container>
   </app-container>
-</app-container>
+</section>

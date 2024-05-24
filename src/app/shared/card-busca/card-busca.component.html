@@ -1,10 +1,12 @@
 <mat-card class="card-busca">
-  <mat-card-header>
-    <mat-card-title>{{ promocao.destino }}</mat-card-title>
-    <mat-card-subtitle>{{ promocao.preco }}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{ promocao.imagem }}" alt="Photo from Portugal" />
+  <img mat-card-image src="{{ promocao.imagem }}" alt="Imagem de Veneza" />
+  <mat-card-content>
+    <ul>
+      <li>{{ promocao.destino }}</li>
+      <li>R$ {{ promocao.preco }}</li>
+    </ul>
+  </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary">Saiba mais</button>
+    <button mat-flat-button color="primary">VER DETALHES</button>
   </mat-card-actions>
 </mat-card>

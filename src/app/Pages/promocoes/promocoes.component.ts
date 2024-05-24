@@ -9,7 +9,10 @@ import { PromocaoService } from 'src/app/Core/services/promocao.service';
 export class PromocoesComponent implements OnInit {
   promocoes!: Promocao[];
   constructor(private service: PromocaoService) {}
+
   ngOnInit(): void {
-    this.service.listar().subscribe((res) => (this.promocoes = res));
+    this.service.listar().subscribe((res) => {
+      this.promocoes = res;
+    });
   }
 }
