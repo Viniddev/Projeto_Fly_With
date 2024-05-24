@@ -1,6 +1,7 @@
 .form-busca {
   margin: 40px 0;
   display: block;
+  min-width: 680px;
 
   .flex-container {
     display: flex;
@@ -29,6 +30,7 @@
   .secondary-section {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 10px;
 
     .destiny {

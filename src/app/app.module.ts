@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
@@ -28,7 +30,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
-
+import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     FormBuscaComponent,
     ModalComponent,
     PromocoesComponent,
+    DropdownUfComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,8 @@ import { ModalComponent } from './shared/modal/modal.component';
     MatNativeDateModule,
     MatDialogModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
