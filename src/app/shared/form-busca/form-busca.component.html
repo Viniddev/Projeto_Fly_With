@@ -29,11 +29,19 @@
     </div>
     <div class="secondary-section">
       <div class="destiny">
-        <app-dropdown-uf label="Origem" prefix="flight_takeoff" />
+        <app-dropdown-uf
+          label="Origem"
+          prefix="flight_takeoff"
+          [control]="formBuscaService.obterControle('origem')"
+        />
         <button mat-icon-button>
           <mat-icon color="primary">sync_alt</mat-icon>
         </button>
-        <app-dropdown-uf label="Destino" prefix="flight_land" />
+        <app-dropdown-uf
+          label="Destino"
+          prefix="flight_land"
+          [control]="formBuscaService.obterControle('origem')"
+        />
       </div>
       <div class="date">
         <mat-form-field class="input-container" appearance="outline">
