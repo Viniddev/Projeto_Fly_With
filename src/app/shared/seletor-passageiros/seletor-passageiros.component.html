@@ -1,0 +1,13 @@
+<div class="identificadores">
+  <h2>{{ this.Seletor }}</h2>
+  <p>{{ this.Description }}</p>
+  <div class="operadores">
+    <button mat-icon-button (click)="incrementar()">
+      <mat-icon color="primary">add_circle</mat-icon>
+    </button>
+    <span class="numbers">{{ value }}</span>
+    <button mat-icon-button (click)="decrementar()">
+      <mat-icon color="primary">backspace</mat-icon>
+    </button>
+  </div>
+</div>

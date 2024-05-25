@@ -1,5 +1,5 @@
 <app-card variant="secondary" class="form-busca">
-  <form [formGroup]="formBuscaService.formgroup">
+  <form [formGroup]="formBuscaService.formgroup" (ngSubmit)="buscar()">
     <h2>Passagens</h2>
     <div class="principal-section">
       <mat-button-toggle-group
@@ -20,9 +20,14 @@
           Ida e Volta
         </mat-button-toggle>
       </mat-button-toggle-group>
-      <mat-chip-listbox aria-label="passages selection" (click)="openDialog()">
-        <mat-chip-option>1 adulto</mat-chip-option>
-        <mat-chip-option color="accent" selected
+      <mat-chip-listbox aria-label="passages selection">
+        <mat-chip-option (click)="formBuscaService.openDialog()"
+          >1 adulto</mat-chip-option
+        >
+        <mat-chip-option
+          color="accent"
+          selected
+          (click)="formBuscaService.openDialog()"
           >Primeira Classe</mat-chip-option
         >
       </mat-chip-listbox>

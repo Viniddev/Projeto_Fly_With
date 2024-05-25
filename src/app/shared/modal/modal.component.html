@@ -2,53 +2,44 @@
   <form>
     <div class="quantidades">
       <div class="identificadores">
-        <h2>Adultos</h2>
-        <p>Acima de 12 anos</p>
-        <div class="operadores">
-          <button mat-icon-button>
-            <mat-icon color="primary">add_circle</mat-icon>
-          </button>
-          <input matInput placeholder="2" class="numbers" />
-          <button mat-icon-button>
-            <mat-icon color="primary">backspace</mat-icon>
-          </button>
-        </div>
-      </div>
-      <div class="identificadores">
-        <h2>Crianças</h2>
-        <p>Entre 2 e 12 anos</p>
-        <div class="operadores">
-          <button mat-icon-button>
-            <mat-icon color="primary">add_circle</mat-icon>
-          </button>
-          <input matInput placeholder="1" class="numbers" />
-          <button mat-icon-button>
-            <mat-icon color="primary">backspace</mat-icon>
-          </button>
-        </div>
-      </div>
-      <div class="identificadores">
-        <h2>Bebês</h2>
-        <p>Até 2 anos</p>
-        <div class="operadores">
-          <button mat-icon-button>
-            <mat-icon color="primary">add_circle</mat-icon>
-          </button>
-          <input matInput placeholder="0" class="numbers" />
-          <button mat-icon-button>
-            <mat-icon color="primary">backspace</mat-icon>
-          </button>
-        </div>
+        <app-seletor-passageiros
+          Seletor="Adultos"
+          Description="Acima de 12 anos"
+          [formControl]="formBuscaService.obterControle('adultos')"
+        />
+        <app-seletor-passageiros
+          Seletor="Crianças"
+          Description="Entre 2 e 12 anos"
+          [formControl]="formBuscaService.obterControle('criancas')"
+        />
+        <app-seletor-passageiros
+          Seletor="Bebês"
+          Description="Menos de 2 anos"
+          [formControl]="formBuscaService.obterControle('bebes')"
+        />
       </div>
     </div>
     <div class="categorias">
       <h2>Categorias</h2>
       <mat-chip-listbox aria-label="Fish selection">
-        <mat-chip-option color="accent" selected
-          >Primeira Classe</mat-chip-option
+        <mat-chip-option
+          color="accent"
+          value="Executiva"
+          [selected]="
+            formBuscaService.formgroup.get('tipo')?.value === 'Executiva'
+          "
+          (selectionChange)="formBuscaService.alterarTipo($event, 'Executiva')"
+          >Executiva</mat-chip-option
         >
-        <mat-chip-option>Executiva</mat-chip-option>
-        <mat-chip-option>Econômica</mat-chip-option>
+
+        <mat-chip-option
+          value="Econômica"
+          [selected]="
+            formBuscaService.formgroup.get('tipo')?.value === 'Econômica'
+          "
+          (selectionChange)="formBuscaService.alterarTipo($event, 'Econômica')"
+          >Econômica</mat-chip-option
+        >
       </mat-chip-listbox>
     </div>
 

@@ -31,6 +31,7 @@ import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf
     ModalComponent,
     PromocoesComponent,
     DropdownUfComponent,
+    SeletorPassageirosComponent,
   ],
   imports: [
     BrowserModule,

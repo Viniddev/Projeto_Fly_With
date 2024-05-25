@@ -11,7 +11,8 @@
 
   .identificadores {
     width: 200px;
-    text-align: start;
+    display: flex;
+    gap: 10px;
   }
 
   .operadores {
