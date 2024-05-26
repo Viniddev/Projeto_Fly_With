@@ -1,21 +1,6 @@
-<mat-card class="card-depoimentos">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image">
-      <img
-        src="../../../assets/ProfileIcons/Rogi.jpg"
-        alt="Rogi, the god father"
-      />
-    </div>
-    <mat-card-title>Rogi</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      Comprei e achei bom demais. O suporte tecnico me surpreendeu e as
-      condições de parcelamento não são superadas por nenhum concorrente!
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-flat-button color="primary">LIKE</button>
-    <button mat-flat-button color="primary">SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="depoimentos">
+  <app-depoimentos
+    *ngFor="let depoimento of depoimentos"
+    [depoimentos]="depoimento"
+  />
+</div>

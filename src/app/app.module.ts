@@ -32,6 +32,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
+import { DepoimentosComponent } from './Pages/depoimentos/depoimentos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seleto
     PromocoesComponent,
     DropdownUfComponent,
     SeletorPassageirosComponent,
+    DepoimentosComponent,
   ],
   imports: [
     BrowserModule,

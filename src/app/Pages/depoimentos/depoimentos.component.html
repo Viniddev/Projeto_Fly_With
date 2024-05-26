@@ -1,0 +1,17 @@
+<div class="conteiner">
+  <mat-card class="card-depoimentos">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image">
+        <img src="{{ depoimentos.avatar }}" alt="Rogi, the god father" />
+      </div>
+      <mat-card-title>{{ depoimentos.autor }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ depoimentos.texto }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary">LIKE</button>
+      <button mat-flat-button color="primary">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
