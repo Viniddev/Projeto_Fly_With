@@ -1,0 +1,77 @@
+.conteiner-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+
+.image-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.img-Banner {
+  width: 100%;
+}
+.login-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: #f6f5f2;
+  border: 1px solid black;
+  color: black;
+
+  width: 750px;
+  height: 450px;
+  border-radius: 30px;
+  box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+
+  mat-card-header {
+    margin-bottom: 24px;
+
+    mat-card-title {
+      font-size: 32px;
+      font-weight: 400;
+    }
+  }
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+  }
+
+  mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    color: white;
+
+    button {
+      margin: 0 8px;
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  a {
+    cursor: pointer;
+
+    &:active {
+      color: #551a8b;
+    }
+  }
+  mat-form-field {
+    color: white;
+  }
+}
