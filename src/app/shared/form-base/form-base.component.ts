@@ -33,15 +33,15 @@ export class FormBaseComponent {
     this.cadastroForm = this.formBuilder.group({
       nome: [null, Validators.required],
       nascimento: [null, [Validators.required]],
-      cpf: ['12312312123', [Validators.required]],
-      cidade: ['City', Validators.required],
-      email: ['chapolin@email.com', [Validators.required, Validators.email]],
-      senha: ['123', [Validators.required, Validators.minLength(3)]],
+      cpf: ['', [Validators.required]],
+      cidade: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      senha: ['', [Validators.required, Validators.minLength(3)]],
       genero: ['outro'],
-      telefone: ['12312312123', Validators.required],
+      telefone: ['', Validators.required],
       estado: this.estadoControl,
       confirmarEmail: [
-        'chapolin@email.com',
+        '',
         [
           Validators.required,
           Validators.email,
@@ -49,7 +49,7 @@ export class FormBaseComponent {
         ],
       ],
       confirmarSenha: [
-        '123',
+        '',
         [
           Validators.required,
           Validators.minLength(3),

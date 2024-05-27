@@ -29,19 +29,17 @@ export class DropdownUfComponent implements OnInit {
       map((value) => this.filtrarUfs(value))
     );
   }
-  filtrarUfs(value: string): UnidadeFederativa[] {
-    const valorFiltrado = value?.toLowerCase();
+
+  filtrarUfs(value: string | UnidadeFederativa): UnidadeFederativa[] {
+    const nomeUf = typeof value === 'string' ? value : value?.nome;
+    const valorFiltrado = nomeUf?.toLowerCase();
     const result = this.unidadesFederativas.filter((estado) =>
       estado.nome.toLowerCase().includes(valorFiltrado)
     );
     return result;
   }
 
-  // private _filter(value: string): string[] {
-  //   const filterValue = value.toLowerCase();
-
-  //   return this.options.filter((option) =>
-  //     option.toLowerCase().includes(filterValue)
-  //   );
-  // }
+  displayFn(uf: UnidadeFederativa): string {
+    return uf && uf.nome ? uf.nome : '';
+  }
 }

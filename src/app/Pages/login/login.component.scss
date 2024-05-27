@@ -1,23 +1,25 @@
 .conteiner-login {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  height: 650px;
+  height: 550px;
 }
 
-.image-container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 .img-Banner {
   width: 100%;
+  background-color: transparent;
 }
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
 .login-component {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
   background-color: #f6f5f2;
   border: 1px solid black;
   color: black;
@@ -27,10 +29,11 @@
   border-radius: 30px;
   box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  padding-bottom: 5px;
 
   mat-card-header {
     margin-bottom: 24px;
@@ -73,5 +76,9 @@
   }
   mat-form-field {
     color: white;
+  }
+
+  .mat-mdc-card {
+    background-color: transparent;
   }
 }
