@@ -66,4 +66,3 @@ export class FormBuscaService {
     this.dialog.open(ModalComponent, { width: '50%' });
   }
 }
-formBusca: FormGroup;

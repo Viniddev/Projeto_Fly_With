@@ -10,17 +10,21 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { DepoimentosComponent } from './Pages/home/depoimentos/depoimentos.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { PromocoesComponent } from './Pages/home/promocoes/promocoes.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { PerfilComponent } from './Pages/perfil/perfil.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './shared/banner/banner.component';
@@ -29,14 +33,12 @@ import { CardDepoimentosComponent } from './shared/card-depoimentos/card-depoime
 import { CardComponent } from './shared/card/card.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FormBaseComponent } from './shared/form-base/form-base.component';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
-import { FormBaseComponent } from './shared/form-base/form-base.component';
-import { CadastroComponent } from './Pages/cadastro/cadastro.component';
-import { PerfilComponent } from './Pages/perfil/perfil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +81,8 @@ import { PerfilComponent } from './Pages/perfil/perfil.component';
     HttpClientModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    MatDividerModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
