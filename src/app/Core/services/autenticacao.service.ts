@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment.development';
 import { UserService } from './user.service';
 
 interface authToken {
-  acess_token: string;
+  access_token: string;
 }
 
 @Injectable({
@@ -24,16 +24,10 @@ export class AutenticacaoService {
   ): Observable<HttpResponse<authToken>> {
     return this.httpClient
       .post<authToken>(
-        `${this.apiUrl}/auth/login`,
-        {
-          email,
-          senha,
-        },
-        { observe: 'response' }
-      )
+        `${this.apiUrl}/auth/login`, {email, senha}, { observe:'response'})
       .pipe(
         tap((response) => {
-          const authToken = response.body?.acess_token || '';
+          const authToken = response.body?.access_token || '';
           this.userService.salvarToken(authToken);
         })
       );

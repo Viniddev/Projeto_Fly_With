@@ -1,1 +1,11 @@
-<p>perfil works!</p>
+
+<app-banner src="../../../assets/imagens/banner-perfil.png"></app-banner>
+<div class="conteiner-perfil">
+  <app-form-base
+    [titulo]="titulo + nome"
+    [textoBotao]="textoBotao"
+    [perfilComponent] = "perfilComponent"
+    (sair)="deslogar()"
+    (acaoClique)="atualizar()"
+    ></app-form-base>
+</div>

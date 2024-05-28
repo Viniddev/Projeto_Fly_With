@@ -9,7 +9,6 @@ import { PessoaUsuaria } from 'src/app/Core/Types/Type';
   styleUrls: ['./cadastro.component.scss'],
 })
 export class CadastroComponent {
-  perfilComponent = false;
 
   constructor(
     private formularioService: FormularioService,
@@ -19,6 +18,7 @@ export class CadastroComponent {
 
   cadastrar() {
     const formCadastro = this.formularioService.getCadastro();
+
     if (formCadastro?.valid) {
       const novoCadastro = formCadastro.getRawValue() as PessoaUsuaria;
 

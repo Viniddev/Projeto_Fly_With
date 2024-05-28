@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { jwtDecode } from 'jwt-decode';
+import jwt_decode from 'jwt-decode';
 import { BehaviorSubject } from 'rxjs';
 import { PessoaUsuaria } from '../Types/Type';
 import { AutenticationService } from './autentication.service';
+
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +11,15 @@ import { AutenticationService } from './autentication.service';
 export class UserService {
   private user = new BehaviorSubject<PessoaUsuaria | null>(null);
 
-  decodificarJwt() {
+  constructor(private autentication: AutenticationService) {
+    if (this.autentication.possuiToken()) {
+      this.decodificarJwt();
+    }
+  }
+
+  private decodificarJwt() {
     const token = this.autentication.retornarToken();
-    const user = jwtDecode(token) as PessoaUsuaria;
+    const user = jwt_decode(token) as PessoaUsuaria;
     this.user.next(user);
   }
 
@@ -32,11 +39,5 @@ export class UserService {
 
   estaLogado() {
     return this.autentication.possuiToken();
-  }
-
-  constructor(private autentication: AutenticationService) {
-    if (this.autentication.possuiToken()) {
-      this.decodificarJwt();
-    }
   }
 }

@@ -1,6 +1,9 @@
 <header class="app-header">
   <mat-toolbar>
-    <span class="titleAplication" routerLink="/">Fly With</span>
+    <div routerLink="/" class="empresa">
+      <img class="img-header" src="../../../assets/imagens/logo2.jpg" alt="logo empresa">
+      <span class="titleAplication">Fly With</span>
+    </div>
 
     <span class="example-spacer"></span>
 
@@ -9,11 +12,12 @@
       Sing up
     </button>
     <a
-      mat-raised-button
+      mat-stroked-button
       href="https://www.linkedin.com/in/vin%C3%ADcius-dias-rodrigues-107602231/"
       target="_blank"
       class="Contact"
       >Contact Us</a
     >
+    <mat-icon class="profile-icon" title="user profile" routerLink="/perfil">person</mat-icon>
   </mat-toolbar>
 </header>

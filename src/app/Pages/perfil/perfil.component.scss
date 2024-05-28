@@ -1,0 +1,8 @@
+.conteiner-perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:host ::ng-deep .perfil-button{
+      width: 90%;
+}

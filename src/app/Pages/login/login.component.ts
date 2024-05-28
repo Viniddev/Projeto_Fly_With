@@ -10,6 +10,13 @@ import { AutenticacaoService } from 'src/app/Core/services/autenticacao.service'
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AutenticacaoService,
+    private router: Router
+  ) {}
+
   login() {
     const email = this.loginForm.value.email;
     const senha = this.loginForm.value.senha;
@@ -18,22 +25,20 @@ export class LoginComponent implements OnInit {
       next: (value) => {
         console.log('login realizado com sucesso', value);
         this.router.navigateByUrl('/');
+        // this.loginForm.reset();
       },
       error: (erro) => {
         console.log('dados inconsistentes', erro);
-        this.router.navigateByUrl('/');
       },
     });
   }
-  constructor(
-    private formBuilder: FormBuilder,
-    private authService: AutenticacaoService,
-    private router: Router
-  ) {}
+
+
+
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
       senha: [null, [Validators.required]],
-    });
+    })
   }
 }

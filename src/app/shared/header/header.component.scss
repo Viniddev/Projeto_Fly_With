@@ -1,4 +1,31 @@
 .app-header {
+
+  .empresa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .profile-icon{
+    background-color: white;
+    color: #673ab7;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+  .img-header{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
   .mat-toolbar {
     padding: 0 256px;
   }
@@ -10,7 +37,7 @@
     flex: 1 1 auto;
   }
   .mat-toolbar-single-row {
-    background-color: #363636;
+    background-color: black;
     color: white;
     gap: 10px;
     border-bottom: 1px solid #696969;

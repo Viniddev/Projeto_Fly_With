@@ -35,7 +35,7 @@ import { CardComponent } from './shared/card/card.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FormBaseComponent } from './shared/form-base/form-base.component';
-import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
