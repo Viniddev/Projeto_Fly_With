@@ -12,7 +12,6 @@ export class CardDepoimentosComponent implements OnInit {
   ngOnInit(): void {
     this.depoimentoService.listar().subscribe((res) => {
       this.depoimentos = res;
-      console.log(this.depoimentos);
     });
   }
 }

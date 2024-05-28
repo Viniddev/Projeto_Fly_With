@@ -1,10 +1,13 @@
 app-container {
   width: 60%;
+  min-width: 450px;
+  display: block;
+  box-sizing: border-box;
+
   margin-bottom: 48px;
   margin-top: 32px;
   background-color: #f6f5f2;
   color: black;
-  box-sizing: border-box;
   padding: 20px;
   border-radius: 30px;
 

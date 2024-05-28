@@ -22,12 +22,6 @@ export class CadastroComponent {
     if (formCadastro?.valid) {
       const novoCadastro = formCadastro.getRawValue() as PessoaUsuaria;
 
-      console.log(novoCadastro.estado.id);
-      console.log(novoCadastro.estado.nome);
-      console.log(novoCadastro.estado.sigla);
-
-      console.log(novoCadastro);
-
       this.cadastroService.cadastrar(novoCadastro).subscribe({
         next: (value) => {
           console.log('Cadastro realizado com sucesso', value);
