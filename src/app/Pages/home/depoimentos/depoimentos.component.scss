@@ -1,9 +1,18 @@
 .conteiner {
   .card-depoimentos {
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, .4);
     display: flex;
+    transition: all .3s;
     max-width: 360px;
+    height: 275px;
+    background-color: #EEEEEE;
     color: #363636;
     margin: 10px;
+    gap: 20px;
+
+    .texto-depoimento{
+      margin-left: 60px;
+    }
 
     .mat-card-header {
       .mat-card-title {
@@ -26,4 +35,11 @@
       color: white;
     }
   }
+  .card-depoimentos:hover {
+    -xpedu-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
 }
+

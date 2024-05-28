@@ -7,25 +7,25 @@
       <mat-card-title>{{ depoimentos.autor }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>{{ depoimentos.texto }}</p>
+      <p class="texto-depoimento">{{ depoimentos.texto }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-flat-button color="primary">
-        <a
+      <a
+          mat-flat-button
+          color="primary"
           class="btn-link"
           target="_blank"
           href="https://www.linkedin.com/feed/"
           >LIKE</a
         >
-      </button>
-      <button mat-flat-button color="primary">
-        <a
+      <a
+          mat-flat-button
+          color="primary"
           class="btn-link"
           target="_blank"
           href="https://www.linkedin.com/feed/"
           >SHARE</a
         >
-      </button>
     </mat-card-actions>
   </mat-card>
 </div>

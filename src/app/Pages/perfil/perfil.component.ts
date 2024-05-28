@@ -35,7 +35,7 @@ export class PerfilComponent implements OnInit {
 
     console.log(this.token);
 
-    this.cadastroservice.buscarCadastro(this.token).subscribe((cad) => {
+    this.cadastroservice.buscarCadastro().subscribe((cad) => {
       this.cadastro = cad;
       this.nome = cad.nome;
       this.carregarFormulario();
@@ -54,7 +54,7 @@ export class PerfilComponent implements OnInit {
       estado: this.form?.value.estado,
     };
 
-    this.cadastroservice.editarCadastro(this.token, dadosAtualizados).subscribe({
+    this.cadastroservice.editarCadastro(dadosAtualizados).subscribe({
       next: () => {
         alert('Cadastro editado com sucesso');
         this.router.navigate(['/']);

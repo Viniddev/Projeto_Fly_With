@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -40,6 +40,7 @@ import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
+import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interceptor';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,7 @@ import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seleto
     MatRadioModule,
     MatCheckboxModule,
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AutenticacaoInterceptor, multi:true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

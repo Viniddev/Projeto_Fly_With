@@ -5,6 +5,14 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
+  }
+
+  .links-toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
   .profile-icon{
@@ -17,8 +25,8 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    cursor: pointer;
     margin-left: 2rem;
+    cursor: pointer;
   }
   .img-header{
     height: 50px;

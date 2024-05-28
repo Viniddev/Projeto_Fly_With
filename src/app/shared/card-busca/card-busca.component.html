@@ -1,5 +1,7 @@
 <mat-card class="card-busca">
-  <img mat-card-image src="{{ promocao.imagem }}" alt="Imagem de Veneza" />
+  <div class="conteiner-image-destino">
+    <img class="imagem-destino" src="{{ promocao.imagem }}" alt="Imagem de Veneza" />
+  </div>
   <mat-card-content>
     <ul>
       <li>{{ promocao.destino }}</li>
@@ -7,13 +9,12 @@
     </ul>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary">
-      <a
+    <a mat-flat-button
+        color="primary"
         class="btn-link"
         target="_blank"
         href="https://pt.wikipedia.org/wiki/{{ promocao.destino }}"
         >VER DETALHES</a
       >
-    </button>
   </mat-card-actions>
 </mat-card>

@@ -7,17 +7,26 @@
 
     <span class="example-spacer"></span>
 
-    <button mat-stroked-button routerLink="/login">Sing in</button>
-    <button mat-raised-button routerLink="/cadastro" color="primary">
-      Sing up
-    </button>
-    <a
-      mat-stroked-button
-      href="https://www.linkedin.com/in/vin%C3%ADcius-dias-rodrigues-107602231/"
-      target="_blank"
-      class="Contact"
-      >Contact Us</a
-    >
-    <mat-icon class="profile-icon" title="user profile" routerLink="/perfil">person</mat-icon>
+    <div class="links-toolbar">
+      <ng-template #login>
+        <button mat-stroked-button routerLink="/login">Sing in</button>
+        <button mat-raised-button routerLink="/cadastro" color="primary">
+          Sing up
+        </button>
+      </ng-template>
+
+      <ng-container *ngIf="user$ | async as pessoaUsuaria, else login">
+        <mat-icon class="profile-icon" title="user profile" routerLink="/perfil">person</mat-icon>
+        <button mat-stroked-button (click)="deslogar()">Sair</button>
+      </ng-container>
+
+      <a
+        mat-stroked-button
+        href="https://www.linkedin.com/in/vin%C3%ADcius-dias-rodrigues-107602231/"
+        target="_blank"
+        class="Contact"
+        >Contact Us</a
+      >
+    </div>
   </mat-toolbar>
 </header>
