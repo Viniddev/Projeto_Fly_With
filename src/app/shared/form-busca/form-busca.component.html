@@ -21,14 +21,14 @@
         </mat-button-toggle>
       </mat-button-toggle-group>
       <mat-chip-listbox aria-label="passages selection">
-        <mat-chip-option (click)="formBuscaService.openDialog()"
-          >1 adulto</mat-chip-option
-        >
+        <mat-chip-option (click)="formBuscaService.openDialog()">{{
+          formBuscaService.getDescricaoPassageiros()
+        }}</mat-chip-option>
         <mat-chip-option
           color="accent"
           selected
           (click)="formBuscaService.openDialog()"
-          >Primeira Classe</mat-chip-option
+          >{{ formBuscaService.getDescricaoPassagens() }}</mat-chip-option
         >
       </mat-chip-listbox>
     </div>

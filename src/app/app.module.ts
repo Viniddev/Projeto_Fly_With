@@ -41,6 +41,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
 import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interceptor';
+import { BuscaComponent } from './Pages/busca/busca/busca.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interc
     FormBaseComponent,
     CadastroComponent,
     PerfilComponent,
+    BuscaComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,8 @@ export class FormBuscaService {
       origem: new FormControl(null),
       destino: new FormControl(null),
       tipo: new FormControl('Executiva'),
-      adultos: new FormControl(1),
-      criancas: new FormControl(0),
+      adultos: new FormControl(2),
+      criancas: new FormControl(1),
       bebes: new FormControl(0),
     });
   }
@@ -43,6 +43,10 @@ export class FormBuscaService {
     }
 
     return descricao;
+  }
+
+  getDescricaoPassagens(): string {
+    return this.formgroup.get('tipo')?.value;
   }
 
   obterControle(nome: string): FormControl {
