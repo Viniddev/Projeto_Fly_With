@@ -17,7 +17,12 @@
       list-style: none;
       &.socials {
         li {
-          text-align: center;
+          .img-icone-footer {
+            margin: 10px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 100%;
+          }
         }
       }
     }

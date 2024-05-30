@@ -43,6 +43,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
 import { CardPassagensComponent } from './shared/card-passagens/card-passagens.component';
+import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { CardPassagensComponent } from './shared/card-passagens/card-passagens.c
     PerfilComponent,
     BuscaComponent,
     CardPassagensComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

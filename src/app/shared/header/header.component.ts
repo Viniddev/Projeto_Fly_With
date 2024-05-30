@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/Core/services/user.service';
 
@@ -12,8 +12,7 @@ export class HeaderComponent {
   user$ = this.userService.retornarUser();
 
   deslogar() {
-   this.userService.logout();
-   this.router.navigate(["/login"])
-
+    this.userService.logout();
+    this.router.navigate(['/login']);
   }
 }

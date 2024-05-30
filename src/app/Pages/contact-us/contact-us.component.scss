@@ -1,0 +1,137 @@
+.conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  .profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 520px;
+    gap: 15px;
+
+    .profile-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+
+    .conteiner-photo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 315px;
+      height: 315px;
+      border-radius: 100%;
+      background-color: #1c1c1c;
+      transition: all 0.5s;
+      margin-bottom: 20px;
+    }
+
+    .conteiner-photo::before,
+    .conteiner-photo::after {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      width: 330px;
+      height: 330px;
+      background: linear-gradient(
+        to left,
+        #feffd2,
+        #ffeea9,
+        #ffbf78,
+        #ff7d29,
+        #ffbf00,
+        #ff9a00,
+        #ff0000
+      );
+      animation: animarborda 10s linear infinite;
+      border-radius: 100%;
+      background-size: 300%;
+      box-shadow: 1px 3px 3px 2px rgba(1, 1, 1, 0.7);
+    }
+
+    @keyframes animarborda {
+      0% {
+        background-position: 0;
+      }
+      100% {
+        background-position: 300%;
+      }
+    }
+    .conteiner-photo::after {
+      filter: blur(50px);
+    }
+
+    .developer-descriptions {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+
+        .profile-icon {
+          height: 40px;
+          width: 40px;
+          background-color: #673ab7;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+      }
+
+      .description {
+        font-size: 1.2rem;
+      }
+
+      .contacts {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 100%;
+
+        .link {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 10px;
+          color: white;
+
+          background-color: #673ab7;
+          width: 155px;
+          height: 60px;
+          border-radius: 10px;
+          text-decoration: none;
+
+          transition: all 0.2s;
+
+          .img-icone {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+          }
+        }
+
+        .link:hover {
+          filter: brightness(1.3);
+        }
+      }
+    }
+  }
+}

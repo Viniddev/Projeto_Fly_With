@@ -1,7 +1,11 @@
 <header class="app-header">
   <mat-toolbar>
     <div routerLink="/" class="empresa">
-      <img class="img-header" src="../../../assets/imagens/logo2.jpg" alt="logo empresa">
+      <img
+        class="img-header"
+        src="../../../assets/imagens/logo2.jpg"
+        alt="logo empresa"
+      />
       <span class="titleAplication">Fly With</span>
     </div>
 
@@ -15,14 +19,16 @@
         </button>
       </ng-template>
 
-      <ng-container *ngIf="user$ | async as pessoaUsuaria, else login">
-        <mat-icon class="profile-icon" title="user profile" routerLink="/perfil">person</mat-icon>
+      <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">
+        <mat-icon class="profile-icon" title="user profile" routerLink="/perfil"
+          >person</mat-icon
+        >
         <button mat-stroked-button (click)="deslogar()">Sair</button>
       </ng-container>
 
       <a
         mat-stroked-button
-        href="https://www.linkedin.com/in/vin%C3%ADcius-dias-rodrigues-107602231/"
+        routerLink="/contact"
         target="_blank"
         class="Contact"
         >Contact Us</a
