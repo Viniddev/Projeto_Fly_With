@@ -6,10 +6,14 @@
   .conteudo {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .passagens {
     flex-grow: 1;
+    color: black;
 
     .destaques {
       display: flex;

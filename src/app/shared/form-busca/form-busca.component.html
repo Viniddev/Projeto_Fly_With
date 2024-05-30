@@ -1,5 +1,5 @@
 <app-card variant="secondary" class="form-busca">
-  <form [formGroup]="formBuscaService.formgroup" (ngSubmit)="buscar()">
+  <form [formGroup]="formBuscaService.formgroup">
     <h2>Passagens</h2>
     <div class="principal-section">
       <mat-button-toggle-group
@@ -11,13 +11,13 @@
           <mat-icon *ngIf="!formBuscaService.formgroup.get('somenteIda')?.value"
             >check</mat-icon
           >
-          Só Ida
+          Ida e Volta
         </mat-button-toggle>
         <mat-button-toggle [value]="true">
           <mat-icon *ngIf="formBuscaService.formgroup.get('somenteIda')?.value"
             >check</mat-icon
           >
-          Ida e Volta
+          Só Ida
         </mat-button-toggle>
       </mat-button-toggle-group>
       <mat-chip-listbox aria-label="passages selection">
@@ -45,14 +45,19 @@
         <app-dropdown-uf
           label="Destino"
           prefix="flight_land"
-          [control]="formBuscaService.obterControle('origem')"
+          [control]="formBuscaService.obterControle('destino')"
         />
       </div>
 
       <div class="date">
         <mat-form-field class="input-container" appearance="outline">
           <mat-label>Data de ida</mat-label>
-          <input matInput [matDatepicker]="ida" placeholder="Data Ida" />
+          <input
+            matInput
+            [matDatepicker]="ida"
+            placeholder="Data Ida"
+            formControlName="dataIda"
+          />
           <mat-datepicker-toggle
             matIconSuffix
             [for]="ida"
@@ -61,14 +66,21 @@
         </mat-form-field>
         <mat-form-field class="input-container" appearance="outline">
           <mat-label>Data da volta</mat-label>
-          <input matInput [matDatepicker]="volta" placeholder="Data VOlta" />
+          <input
+            matInput
+            [matDatepicker]="volta"
+            placeholder="Data Volta"
+            formControlName="dataVolta"
+          />
           <mat-datepicker-toggle
             matIconSuffix
             [for]="volta"
           ></mat-datepicker-toggle>
           <mat-datepicker #volta></mat-datepicker>
         </mat-form-field>
-        <button mat-flat-button color="primary">BUSCAR</button>
+        <button mat-flat-button color="primary" (click)="buscar()">
+          BUSCAR
+        </button>
       </div>
     </div>
   </form>

@@ -20,6 +20,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interceptor';
+import { BuscaComponent } from './Pages/busca/busca.component';
 import { CadastroComponent } from './Pages/cadastro/cadastro.component';
 import { DepoimentosComponent } from './Pages/home/depoimentos/depoimentos.component';
 import { HomeComponent } from './Pages/home/home.component';
@@ -33,15 +35,14 @@ import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
 import { CardDepoimentosComponent } from './shared/card-depoimentos/card-depoimentos.component';
 import { CardComponent } from './shared/card/card.component';
 import { ContainerComponent } from './shared/container/container.component';
+import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FormBaseComponent } from './shared/form-base/form-base.component';
-import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
 import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
-import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interceptor';
-import { BuscaComponent } from './Pages/busca/busca/busca.component';
+import { CardPassagensComponent } from './shared/card-passagens/card-passagens.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { BuscaComponent } from './Pages/busca/busca/busca.component';
     CadastroComponent,
     PerfilComponent,
     BuscaComponent,
+    CardPassagensComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,13 @@ import { BuscaComponent } from './Pages/busca/busca/busca.component';
     MatRadioModule,
     MatCheckboxModule,
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AutenticacaoInterceptor, multi:true}],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AutenticacaoInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

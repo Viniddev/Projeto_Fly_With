@@ -12,6 +12,8 @@ export class PassagensService {
 
   getPassagens(search: any): Observable<Resultado> {
     const params = search;
+
+    console.log('params: ' + params);
     return this.httpclient.get<Resultado>(`${this.apiurl}/passagem/search`, {
       params,
     });
