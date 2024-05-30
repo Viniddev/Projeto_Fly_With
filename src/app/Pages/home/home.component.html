@@ -6,7 +6,12 @@
   <app-container>
     <app-container>
       <br />
-      <app-form-busca [emitirBusca]="false"></app-form-busca>
+      <div class="buca-detalhada">
+        <h1>Busca detalhada de passagens</h1>
+        <button class="button-busca" mat-flat-button routerLink="/busca">
+          Busca
+        </button>
+      </div>
       <h2 class="main-headers">Promoções</h2>
       <div class="conteiner-main">
         <app-promocoes></app-promocoes>

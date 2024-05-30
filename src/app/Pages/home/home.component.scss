@@ -4,6 +4,19 @@
   justify-content: center;
 }
 
+.buca-detalhada {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  .button-busca {
+    background-color: #673ab7;
+    color: white;
+    width: 150px;
+  }
+}
+
 .conteiner-depoimentos {
   display: flex;
   align-items: center;
@@ -11,6 +24,6 @@
   flex-wrap: wrap;
 }
 
-.main-headers{
+.main-headers {
   font-size: 2rem;
 }
