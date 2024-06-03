@@ -9,7 +9,6 @@ import { PessoaUsuaria } from 'src/app/Core/Types/Type';
   styleUrls: ['./cadastro.component.scss'],
 })
 export class CadastroComponent {
-
   constructor(
     private formularioService: FormularioService,
     private cadastroService: CadastroService,
@@ -25,7 +24,7 @@ export class CadastroComponent {
       this.cadastroService.cadastrar(novoCadastro).subscribe({
         next: (value) => {
           console.log('Cadastro realizado com sucesso', value);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/']);
         },
         error: (err) => {
           console.log('Erro ao realizar cadastro', err);

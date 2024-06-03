@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { PessoaUsuaria } from 'src/app/Core/Types/Type';
 import { AutenticationService } from 'src/app/Core/services/autentication.service';
 import { CadastroService } from 'src/app/Core/services/cadastro.service';
-import { FormGroup } from '@angular/forms';
 import { FormularioService } from 'src/app/Core/services/formulario.service';
 import { UserService } from 'src/app/Core/services/user.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -67,7 +67,7 @@ export class PerfilComponent implements OnInit {
 
   deslogar() {
     this.userService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
   carregarFormulario() {

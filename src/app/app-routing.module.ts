@@ -10,7 +10,7 @@ import { PerfilComponent } from './Pages/perfil/perfil.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent,
   },
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     component: ContactUsComponent,
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     canActivate: [authGuard],
   },

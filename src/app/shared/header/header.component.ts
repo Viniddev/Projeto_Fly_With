@@ -13,6 +13,6 @@ export class HeaderComponent {
 
   deslogar() {
     this.userService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

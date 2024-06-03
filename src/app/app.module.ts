@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutenticacaoInterceptor } from './Core/interceptors/autenticacao.interceptor';
 import { BuscaComponent } from './Pages/busca/busca.component';
 import { CadastroComponent } from './Pages/cadastro/cadastro.component';
+import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
 import { DepoimentosComponent } from './Pages/home/depoimentos/depoimentos.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { PromocoesComponent } from './Pages/home/promocoes/promocoes.component';
@@ -33,6 +34,7 @@ import { AppComponent } from './app.component';
 import { BannerComponent } from './shared/banner/banner.component';
 import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
 import { CardDepoimentosComponent } from './shared/card-depoimentos/card-depoimentos.component';
+import { CardPassagensComponent } from './shared/card-passagens/card-passagens.component';
 import { CardComponent } from './shared/card/card.component';
 import { ContainerComponent } from './shared/container/container.component';
 import { DropdownUfComponent } from './shared/dropdown-uf/dropdown-uf.component';
@@ -42,8 +44,6 @@ import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { SeletorPassageirosComponent } from './shared/seletor-passageiros/seletor-passageiros.component';
-import { CardPassagensComponent } from './shared/card-passagens/card-passagens.component';
-import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +93,7 @@ import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
     MatDividerModule,
     MatRadioModule,
     MatCheckboxModule,
+    MatSelectModule,
   ],
   providers: [
     {

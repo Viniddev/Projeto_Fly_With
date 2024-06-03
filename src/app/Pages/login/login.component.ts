@@ -24,8 +24,7 @@ export class LoginComponent implements OnInit {
     this.authService.autenticar(email, senha).subscribe({
       next: (value) => {
         console.log('login realizado com sucesso', value);
-        this.router.navigateByUrl('/');
-        // this.loginForm.reset();
+        this.router.navigateByUrl('/home');
       },
       error: (erro) => {
         console.log('dados inconsistentes', erro);
@@ -33,12 +32,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
       senha: [null, [Validators.required]],
-    })
+    });
   }
 }
