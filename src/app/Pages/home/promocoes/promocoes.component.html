@@ -1,3 +1,11 @@
+<div class="sort-wrapper">
+  <label for="sort">Ordenar por:</label>
+  <select id="sort" class="sort-select" (change)="handleSortChange($event)">
+    <option value="alphabetical">Ordem Alfabética</option>
+    <option value="price">Preço</option>
+  </select>
+</div>
+
 <div class="card-wrapper">
-  <app-card-busca *ngFor="let item of promocoes" [promocao]="item" />
+  <app-card-busca *ngFor="let item of promocoes" [promocao]="item"></app-card-busca>
 </div>
