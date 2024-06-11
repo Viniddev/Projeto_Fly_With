@@ -17,7 +17,7 @@
 
   .profile-icon{
     background-color: white;
-    color: #673ab7;
+    color: #DC5F00;
     height: 40px;
     width: 40px;
     border-radius: 100%;
@@ -51,10 +51,11 @@
     border-bottom: 1px solid #696969;
   }
   .mat-mdc-outlined-button:not(:disabled) {
-    border: 2px solid #673ab7;
+    border: 2px solid #DC5F00;
   }
   .mat-mdc-raised-button.mat-unthemed {
-    --mdc-protected-button-container-color: #673ab7;
+    --mdc-protected-button-container-color: #DC5F00;
     --mdc-protected-button-label-text-color: white;
   }
 }
+

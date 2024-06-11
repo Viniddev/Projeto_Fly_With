@@ -1,11 +1,11 @@
 .conteiner {
   .card-depoimentos {
-    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, .4);
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, .08);
     display: flex;
     transition: all .3s;
     max-width: 360px;
     height: 275px;
-    background-color: #EEEEEE;
+    background-color: #FFF;
     color: #363636;
     margin: 10px;
     gap: 20px;
@@ -33,6 +33,7 @@
     .btn-link {
       font-style: none;
       color: white;
+      background: #DC5F00;
     }
   }
   .card-depoimentos:hover {
