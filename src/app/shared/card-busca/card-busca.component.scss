@@ -1,64 +1,106 @@
 .card-busca {
   max-width: 320px;
-  background-color: #EEEEEE;
+  background-color: #FFFFFF;
   border-radius: 12px;
-  transition: all .3s;
-  box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, .4);
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  .conteiner-image-destino{
+  .conteiner-image-destino {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     box-sizing: border-box;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-
-    margin-bottom: 25px;
+    margin-bottom: 8px;
+    overflow: hidden; /* Mantém a imagem dentro do contêiner */
 
     .imagem-destino {
-      width: 95%;
-      border-radius: 10px;
-      }
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      transition: transform 0.3s; /* Adicionado para a transição do zoom */
+    }
   }
-  mat-card-actions{
+
+  mat-card-actions {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-
   mat-card-title {
-    color: black;
+    color: #333333;
+    font-size: 20px;
   }
 
   button {
-    width: 100%;
-    margin: 0 16px 30px;
+    width: calc(100% - 32px);
+    margin: 0 16px 20px;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #6E8EF4, #8EA6F6); /* Gradiente suave */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
   }
+
+  button:hover {
+    background: linear-gradient(135deg, #5B79E6, #7B94E8); /* Gradiente mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de elevação */
+  }
+
   ul {
     list-style: none;
     padding: 0;
     li {
-      margin: 12px;
+      margin: 10px 0;
       font-weight: 400;
-      font-size: 24px;
-      line-height: 32px;
-      color: #1d1b20;
+      font-size: 18px;
+      line-height: 26px;
+      color: #333333;
       text-align: center;
     }
   }
 
   .btn-link {
-    font-style: none;
-    color: white;
+    font-style: normal;
+    width: 100%;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    background: #DC5F00;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .btn-link:hover {
+    color: #FFFFFF;
   }
 }
 
-.card-busca:hover{
-  -xpedu-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  filter: brightness(1.2);
+.card-busca:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
+}
+
+.card-busca:hover .imagem-destino {
+  transform: scale(1.1); /* Adicionado para fazer o zoom na imagem */
+}
+
+.card-busca ul .title-destiny {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card-busca ul .price-destiny {
+  font-size: 18px;
+  color: #333333;
+  text-align: center;
 }

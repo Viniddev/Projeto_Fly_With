@@ -2,19 +2,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
+
+
 
 .buca-detalhada {
   background-color: white;
   color: black;
   border-radius: 10px;
   padding: 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  .button-busca {
-    background-color: #673ab7;
-    color: white;
-    width: 150px;
-  }
+  display: flex; /* Adiciona display flex para alinhar os itens */
+  flex-direction: column; /* Define a direção dos itens como coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+.button-busca {
+  background-color: #DC5F00;
+  color: white;
+  width: 330px;
+  margin-top: 10px; /* Adiciona um espaço entre o botão e o texto acima */
 }
 
 .conteiner-depoimentos {
@@ -22,8 +32,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .main-headers {
   font-size: 2rem;
+  color: #373A40;
 }

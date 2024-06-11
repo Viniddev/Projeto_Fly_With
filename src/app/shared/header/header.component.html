@@ -14,7 +14,7 @@
     <div class="links-toolbar">
       <ng-template #login>
         <button mat-stroked-button routerLink="/">Entrar</button>
-        <button mat-raised-button routerLink="/cadastro" color="primary">
+        <button mat-raised-button routerLink="/cadastro">
           Cadastrar
         </button>
       </ng-template>
@@ -23,7 +23,7 @@
         <mat-icon class="profile-icon" title="user profile" routerLink="/perfil"
           >person</mat-icon
         >
-        <button mat-stroked-button (click)="deslogar()">Sair</button>
+        <button mat-stroked-button class="button" (click)="deslogar()">Sair</button>
       </ng-container>
 
       <a
